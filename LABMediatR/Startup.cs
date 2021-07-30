@@ -1,3 +1,4 @@
+
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +10,8 @@ using System.Reflection;
 
 namespace LABMediatR
 {
+    using Repository;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -25,11 +28,15 @@ namespace LABMediatR
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "LABMediatR", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Estudo Biblioteca MediatR", Version = "v1" });
             });
+
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
 
             // Registra os Handlers e um assembly
             services.AddMediatR(Assembly.GetExecutingAssembly());
+
+     
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

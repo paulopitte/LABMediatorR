@@ -6,6 +6,7 @@
     <RootNamespace>LABMediatR</RootNamespace>
     <Authors>Paulo S M Pitte</Authors>
     <Company>Paulo S M Pitte</Company>
+    <Description>Estudo da Biblioteca do Padrão Mediador</Description>
   </PropertyGroup>
 
   <ItemGroup>

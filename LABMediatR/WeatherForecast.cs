@@ -1,6 +1,6 @@
 using System;
 
-namespace LABMediatorR
+namespace LABMediatR
 {
     public class WeatherForecast
     {

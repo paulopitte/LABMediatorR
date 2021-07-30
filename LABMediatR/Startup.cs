@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 
-namespace LABMediatorR
+namespace LABMediatR
 {
     public class Startup
     {
@@ -25,10 +25,10 @@ namespace LABMediatorR
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "LABMediatorR", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "LABMediatR", Version = "v1" });
             });
 
-            // Registra os Handlers em um assembly
+            // Registra os Handlers e um assembly
             services.AddMediatR(Assembly.GetExecutingAssembly());
         }
 
@@ -39,7 +39,7 @@ namespace LABMediatorR
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "LABMediatorR v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "LABMediatR v1"));
             }
 
             app.UseRouting();

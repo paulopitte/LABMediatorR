@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>LABMediatR</AssemblyName>
+    <RootNamespace>LABMediatR</RootNamespace>
+    <Authors>Paulo S M Pitte</Authors>
+    <Company>Paulo S M Pitte</Company>
   </PropertyGroup>
 
   <ItemGroup>

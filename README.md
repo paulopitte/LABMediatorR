@@ -26,14 +26,29 @@ O mediatR despach dois tipos de mensagens
 1- Mensagens de Request/Response => despachada para um único handler.
 <br>
 2- Mensagens de Notificação => despachada para múltiplos handlers.
-<br>
-<b style="color:red">COMPONENTES PRINCIPAIS</b>
+<br><br>
+<b>COMPONENTES PRINCIPAIS</b>
 
-<BR>
+<BR><br>
 
 1 - <strong>"REQUEST"</strong> -> Representa a mensagem a ser processada e possui propriedades para fazer o input dos dados para os handlers.<br>
 2 - <strong>"HANDLER"</strong> -> Faz o processamento de determinada(s) mensagen(s).<br>
 <br>
 São implementados usando as interfaces IRequest e IRequestHandler
+<br><br>
+
+<strong>TIPOS DE REQUEST</strong>
+<BR>
+1 - IRequest => o request que não retorna um valor.<br>
+2 - IRequest<T> => O request que retorna um valor.
+<br><br>
+Cada Request possiu o seu Handler
+<br>
+<br>
+1 - IRequestHandler<T> => Para processamento que não retorna um valor.<br>
+2 - IRequestHandler<T,U> => Para processamento que retorna um valor.<br>
+<br>
+<br>
+
 
 

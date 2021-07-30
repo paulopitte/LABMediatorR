@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LABMediatR.Models
+namespace LABMediatR.Domain
 {
     /// <summary>
     /// Classe extremamente anêmica para estudo.

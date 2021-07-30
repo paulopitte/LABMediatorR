@@ -2,7 +2,7 @@
 
 namespace LABMediatR.Repository
 {
-    using Models;
+    using Domain;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace LABMediatR.Handlers
 {
-    using Models;
+    using Domain;
     using Requests;
     using Repository;
     using System.Threading;

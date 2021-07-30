@@ -24,7 +24,7 @@ namespace LABMediatR.Controllers
         /// <returns>Retorna o estado da ação.</returns>
         /// <response code="200">Se for encontrado algum item.</response>
         /// <response code="500">Se ocorrer um erro no servidor.</response>
-        [ProducesResponseType(typeof(IEnumerable<Models.Customer>), 200)]
+        [ProducesResponseType(typeof(IEnumerable<Domain.Customer>), 200)]
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAll()
         {

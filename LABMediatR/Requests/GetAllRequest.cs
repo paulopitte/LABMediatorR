@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LABMediatR.Requests
 {
-    using Models;
+    using Domain;
 
     public class GetAllRequest : IRequest<IEnumerable<Customer>>
     {

@@ -11,7 +11,7 @@ namespace LABMediatR.Domain.Validations
                    .NotEmpty()
                    .WithMessage("O Nome é obrigátorio!")
                    .WithErrorCode("Customer.Name.Empty")
-                   .Length(6, 255)
+                   .Length(10, 255)
                    .WithMessage("Nome deve ter entre 6 e 255 caracteres")
                    .WithErrorCode("Customer.Name.BetterThanMaximun");
         }

@@ -10,6 +10,7 @@ using System.Reflection;
 
 namespace LABMediatR
 {
+    using LABMediatR.Handlers;
     using Repository;
 
     public class Startup
@@ -21,7 +22,6 @@ namespace LABMediatR
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -32,6 +32,7 @@ namespace LABMediatR
             });
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidateCommandHandler<,>));
 
             // Registra os Handlers e um assembly
             services.AddMediatR(Assembly.GetExecutingAssembly());
@@ -39,7 +40,6 @@ namespace LABMediatR
      
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

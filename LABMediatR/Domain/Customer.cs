@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 
 namespace LABMediatR.Domain
 {
@@ -15,5 +15,7 @@ namespace LABMediatR.Domain
             Id = Guid.NewGuid();
             Name = name;
         }
+
+
     }
 }
